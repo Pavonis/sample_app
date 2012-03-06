@@ -1,3 +1,25 @@
 <% provide(:title, 'Sign Up') %>
 <h1> <%= yield(:title) %> </h1>
-<p> This is a stub page for the New User Sign Up implementation </p>
+
+<%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>   
+    <div class= "field">
+        <%= f.label :name %> <br/>
+        <%= f.text_field :name %>
+    </div>
+    <div class= "field">
+        <%= f.label :email %> <br/>
+        <%= f.text_field :email %>
+    </div>
+    <div class= "field">
+        <%= f.label :password %> <br/>
+        <%= f.password_field :password %>
+    </div>
+    <div class= "field">
+        <%= f.label :password_confirmation, "Confirmation" %> <br/>
+        <%= f.password_field :password_confirmation %>
+    </div>
+    <div class= "actions">
+        <%= f.submit "Sign Up" %>
+    </div> 
+<% end %>

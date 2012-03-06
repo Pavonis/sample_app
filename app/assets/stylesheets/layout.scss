@@ -1,17 +1,19 @@
 $visited-link-color: #069;
 $link-color: #09c;
 
-$full-width: 710px;
+$full-width: 960px;
 $background-color: #cff;
 
 .container{
     width: $full-width;
+    margin: auto;
 }
 
 body{
     background: $background-color;
     font-family: sans-serif;
 }
+
 header {
     padding-top: 20px;
     img {
@@ -28,6 +30,8 @@ section{
     section h1 {
         font-size: 200%;
     }
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* links */
@@ -98,8 +102,73 @@ footer {
     width: $full-width;
     margin-left: auto;
     margin-right: auto;
-    
     nav {
         float: none;
+    }
+}
+
+/* User show page */
+
+table.profile {
+    width: 100%;
+    margin-bottom: 0px;
+    img.gravatar {
+        border: 1px solid #999;
+        margin-bottom: -15px;
+    }
+}
+
+td.main {
+    width: 70%;
+    padding: 1em;
+}
+
+td.sidebar {
+    width: 30%;
+    padding: 1em;
+    vertical-align: top;
+    background: #ffc;
+}
+
+/* Error Styles */
+
+.field_with_errors {
+    margin-top: 10px;
+    padding: 2px;
+    background-color: red;
+    display: table; 
+    
+    label {
+        color: #fff;
+    }
+}
+
+#error-explanation {
+    width: 400px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    background-color: #0f0f0f;
+    
+    h2 {
+        text-align: left;
+        font-weight: bold;
+        padding: 5px 5px 5px 15px;
+        font-size: 12px;
+        margin: 7px;
+        background-color: #C00;
+        color: #FFF;
+    }
+    
+    p {
+        color: #333;
+        margin-bottom: 0px;
+        padding: 5px;
+    }
+    
+    ul li {
+        font-size: 12 px;
+        list-style: square;
     }
 }
